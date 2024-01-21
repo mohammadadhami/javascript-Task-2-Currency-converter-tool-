@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Task JS</title>
+</head>
+<body>
+    <form>
+        <label for="amount">Enter amount in Shekel:</label>
+        <input type="number" class="amount">
+
+        <label for="targetCurrency">Choose target currency:</label>
+        <select class="targetCurrency">
+            <option value="3.5">USD</option>
+            <option value="5">JD</option>
+        </select>
+        <button type="button" onclick="convertCurrency()">Convert</button>
+    </form>
+
+    <p class="result"></p>
+
+    <script>
+        function convertCurrency() {
+            var amount = document.querySelector(".amount").value;
+            var target = document.querySelector(".targetCurrency").value;
+            var result = amount/target;
+            document.querySelector(".result").innerHTML = result;
+        }
+    </script>
+</body>
+</html>
